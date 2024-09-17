@@ -14,6 +14,7 @@ FROM eclipse-temurin:21-jre-jammy AS base-runner
 FROM base-runner AS runner
 
 LABEL authors="Marcos Henrique de Santana"
+LABEL version="0.0.1-SNAPSHOT"
 
 USER root
 WORKDIR /app
