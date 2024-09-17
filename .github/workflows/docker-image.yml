@@ -33,7 +33,7 @@ jobs:
         docker buildx create --use
         docker buildx build ./backend-chat-ai-azure \
           --platform linux/amd64,linux/arm64/v8 \
-          --file Dockerfile \
+          --file ./backend-chat-ai-azure/Dockerfile \
           --tag marcoshssilvadev/backend-chat-ai-azure:${{ env.VERSION }} \
           --tag marcoshssilvadev/backend-chat-ai-azure:latest \
           --push
