@@ -24,8 +24,9 @@ jobs:
     - name: backend-chat-ai-azure - Extract version from pom.xml
       id: extract_version
       run: |
-        VERSION=$(grep -oPm2 "(?<=<version>)[^<]+" backend-chat-ai-azure/pom.xml)
-        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        VERSIONS=$(grep -oPm2 "(?<=<version>)[^<]+" backend-chat-ai-azure/pom.xml)
+        VERSION=$(echo "$VERSIONS" | sed -n '2p' | sed 's/[^a-zA-Z0-9._-]/_/g')
+        echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
     - name: backend-chat-ai-azure - Build and push Docker image to multiple platforms
       run: |
