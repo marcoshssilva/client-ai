@@ -1,0 +1,38 @@
+name: Build and push Docker image to Docker Hub
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+      with:
+        platforms: arm64,amd64
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - uses: actions/checkout@v4
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+    
+    - name: backend-chat-ai-azure - Extract version from pom.xml
+      id: extract_version
+      run: |
+        VERSION=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" backend-chat-ai-azure/pom.xml)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: backend-chat-ai-azure - Build and push Docker image to multiple platforms
+      run: |
+        docker buildx create --use
+        docker buildx build ./backend-chat-ai-azure \
+          --platform linux/amd64,linux/arm64/v8 \
+          --file Dockerfile \
+          --tag marcoshssilvadev/backend-chat-ai-azure:${{ env.VERSION }} \
+          --tag marcoshssilvadev/backend-chat-ai-azure:latest \
+          --push
