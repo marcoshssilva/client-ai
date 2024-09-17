@@ -6,7 +6,7 @@ My intention is to explore the full potential of generative AI using Spring Boot
 
 ## Requirements
 
-- **Only for OpenIA using Azure** OpenAI endpoint and key in Azure with previously deployment to chat, image and text-to-speech (at least one deployment to each)
-- **Only for OpenIA platform** OpenAI Key with recharged credits to make requests
+- **Only for OpenIA using Azure**: OpenAI endpoint and key in Azure with previously deployment to chat, image and text-to-speech (at least one deployment to each)
+- **Only for OpenIA platform**: OpenAI Key with recharged credits to make requests
 - JDK Java v21
 - Maven v3+
