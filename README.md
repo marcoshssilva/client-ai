@@ -21,10 +21,10 @@ Use a simple docker run as:
 
 ```bash
 docker run --name backend-chat-ai-azure \
-  -e OPENAI_APIKEY=$YOUR_KEY_1_OR_2 \
-  -e OPENAI_ENDPOINT=$YOUR_API_AZURE_ENDPOINT \
-  -e OPENAI_CHAT_DEPLOYMENT=$YOUR_AZURE_AI_DEPLOYMENT_NAME \
-  -e OPENAI_CHAT_MODEL=$YOUR_MODEL_NAME \
+  -e OPENAI_APIKEY="your_actual_key_here" \
+  -e OPENAI_ENDPOINT="https://your-api-endpoint.azurewebsites.net" \
+  -e OPENAI_CHAT_DEPLOYMENT="your_deployment_name" \
+  -e OPENAI_CHAT_MODEL="your_model_name" \
   -p 8080:8080 \
-  marcoshssilvadev/backend-chat-ai-azure
+  marcoshssilvadev/backend-chat-ai-azure:latest
 ```
