@@ -28,7 +28,7 @@ ENV JAVA_HOME="/opt/java/openjdk"
 ENV LC_ALL="en_US.UTF-8"
 ENV LANG="en_US.UTF-8"
 
-ENTRYPOINT java "$JAVA_OPTS" -jar /app/app.jar
+ENTRYPOINT java -XX:+UseContainerSupport -XX:MaxRAMPercentage=80 "$JAVA_OPTS" -jar /app/app.jar
 
 EXPOSE 8080
 EXPOSE 9000
