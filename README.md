@@ -10,3 +10,21 @@ My intention is to explore the full potential of generative AI using Spring Boot
 - **Only for OpenIA platform**: OpenAI Key with recharged credits to make requests
 - JDK Java v21
 - Maven v3+
+
+## Install
+
+### Docker Image
+
+You can pull docker image from [marcoshssilvadev/backend-chat-ai-azure](https://hub.docker.com/r/marcoshssilvadev/backend-chat-ai-azure)
+
+Use a simple docker run as:
+
+```bash
+docker run --name backend-chat-ai-azure \
+  -e OPENAI_APIKEY=$YOUR_KEY_1_OR_2 \
+  -e OPENAI_ENDPOINT=$YOUR_API_AZURE_ENDPOINT \
+  -e OPENAI_CHAT_DEPLOYMENT=$YOUR_AZURE_AI_DEPLOYMENT_NAME \
+  -e OPENAI_CHAT_MODEL=$YOUR_MODEL_NAME \
+  -p 8080:8080 \
+  marcoshssilvadev/backend-chat-ai-azure
+```
