@@ -23,8 +23,43 @@ Use a simple docker run as:
 docker run --name backend-chat-ai-azure \
   -e OPENAI_APIKEY="your_actual_key_here" \
   -e OPENAI_ENDPOINT="https://your-api-endpoint.azurewebsites.net" \
-  -e OPENAI_CHAT_DEPLOYMENT="your_deployment_name" \
-  -e OPENAI_CHAT_MODEL="your_model_name" \
+  -e OPENAI_CHAT_DEPLOYMENT="your_chat_deployment_name" \
+  -e OPENAI_CHAT_MODEL="your_chat_model_name" \
+  -e OPENAI_IMAGE_DEPLOYMENT="your_image_deployment_name"
+  -e OPENAI_CHAT_MODEL="your_image_model_name" \
   -p 8080:8080 \
+  -p 9000:9000 \
   marcoshssilvadev/backend-chat-ai-azure:latest
+```
+
+## API Endpoints
+
+### 1. Using Chat prompt
+
+```curl
+GET http://localhost:8080/api/ai/v1/chat/prompt?userInput={{$random.alphanumeric(8)}}
+```
+or
+```curl
+POST http://localhost:8080/api/ai/v1/chat/prompt
+Content-Type: application/json
+
+{
+  "userInput": ""
+}
+```
+
+### 2. Using Image generator
+
+```curl
+GET http://localhost:8080/api/ai/v1/image/generator?userInput={{$random.alphanumeric(8)}}
+```
+or
+```curl
+POST http://localhost:8080/api/ai/v1/image/generator
+Content-Type: application/json
+
+{
+  "userInput": ""
+}
 ```
