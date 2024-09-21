@@ -37,11 +37,11 @@ docker run --name backend-chat-ai-azure \
 ### 1. Using Chat prompt
 
 ```http request
-GET http://localhost:8080/api/ai/v1/chat/prompt?userInput={{$random.alphanumeric(8)}}
+GET http://localhost:8080/api/client/v1/chat/prompt?userInput={{$random.alphanumeric(8)}}
 ```
 or
 ```http request
-POST http://localhost:8080/api/ai/v1/chat/prompt
+POST http://localhost:8080/api/client/v1/chat/prompt
 Content-Type: application/json
 
 {
@@ -52,11 +52,11 @@ Content-Type: application/json
 ### 2. Using Image generator
 
 ```http request
-GET http://localhost:8080/api/ai/v1/image/generator?userInput={{$random.alphanumeric(8)}}
+GET http://localhost:8080/api/client/v1/image/generator?userInput={{$random.alphanumeric(8)}}
 ```
 or
 ```http request
-POST http://localhost:8080/api/ai/v1/image/generator
+POST http://localhost:8080/api/client/v1/image/generator
 Content-Type: application/json
 
 {
