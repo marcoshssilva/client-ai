@@ -26,7 +26,7 @@ docker run --name backend-chat-ai-azure \
   -e OPENAI_CHAT_DEPLOYMENT="your_chat_deployment_name" \
   -e OPENAI_CHAT_MODEL="your_chat_model_name" \
   -e OPENAI_IMAGE_DEPLOYMENT="your_image_deployment_name"
-  -e OPENAI_CHAT_MODEL="your_image_model_name" \
+  -e OPENAI_IMAGE_MODEL="your_image_model_name" \
   -p 8080:8080 \
   -p 9000:9000 \
   marcoshssilvadev/backend-chat-ai-azure:latest
