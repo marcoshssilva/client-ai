@@ -7,17 +7,20 @@
 	},
 	"item": [
 		{
-			"name": "Make prompt",
+			"name": "Call Prompt with GET",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_ENDPOINT}}/ai/prompt?userInput=What's up bro?",
+					"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt?userInput=What's up bro?",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
 					"path": [
+						"api",
 						"ai",
+						"v1",
+						"chat",
 						"prompt"
 					],
 					"query": [
@@ -35,12 +38,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ENDPOINT}}/ai/prompt?userInput=What's up bro?",
+							"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt?userInput=What's up bro?",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
 							"path": [
+								"api",
 								"ai",
+								"v1",
+								"chat",
 								"prompt"
 							],
 							"query": [
@@ -82,7 +88,7 @@
 			]
 		},
 		{
-			"name": "Make prompt",
+			"name": "Call Prompt with POST",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -96,12 +102,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{API_ENDPOINT}}/ai/prompt",
+					"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
 					"path": [
+						"api",
 						"ai",
+						"v1",
+						"chat",
 						"prompt"
 					]
 				}
@@ -122,12 +131,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ENDPOINT}}/ai/prompt",
+							"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
 							"path": [
+								"api",
 								"ai",
+								"v1",
+								"chat",
 								"prompt"
 							]
 						}
@@ -159,6 +171,174 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"message\": \"Making lemonade is simple and refreshing. Here’s a basic recipe for homemade lemonade:\\n\\n### Ingredients:\\n- 1 cup (240 ml) freshly squeezed lemon juice (about 4-6 lemons)\\n- 1 cup (200 g) granulated sugar (adjust to taste)\\n- 4-5 cups (950-1200 ml) cold water\\n- Ice cubes\\n- Lemon slices and mint leaves for garnish (optional)\\n\\n### Instructions:\\n\\n1. **Juice the Lemons:**\\n   - Roll the lemons on the countertop to make them easier to juice.\\n   - Cut the lemons in half and use a juicer or reamer to extract the juice.\\n   - Strain the juice through a fine-mesh sieve to remove seeds and pulp if desired.\\n\\n2. **Make the Simple Syrup:**\\n   - In a small saucepan, combine the sugar and 1 cup of water.\\n   - Heat over medium heat, stirring constantly until the sugar is completely dissolved.\\n   - Remove from heat and let it cool to room temperature. This simple syrup will help the sugar dissolve better in the lemonade.\\n\\n3. **Mix the Lemonade:**\\n   - In a large pitcher, combine the freshly squeezed lemon juice and the cooled simple syrup.\\n   - Add 3-4 cups of cold water to the pitcher and stir well. Taste the lemonade and adjust the sweetness or tartness by adding more sugar or lemon juice as needed. You can also add more water if it’s too strong.\\n\\n4. **Serve:**\\n   - Fill glasses with ice cubes.\\n   - Pour the lemonade into the glasses.\\n   - Garnish with lemon slices and mint leaves if desired.\\n\\n5. **Enjoy:**\\n   - Serve immediately and enjoy your refreshing homemade lemonade!\\n\\n### Tips:\\n- For a more intense lemon flavor, add some lemon zest to the simple syrup while it's heating.\\n- You can also experiment with adding other flavors like a splash of lime juice, a few crushed berries, or a sprig of rosemary for a unique twist.\\n\\nEnjoy your homemade lemonade!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Call Image Generator with GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"api",
+						"ai",
+						"v1",
+						"image",
+						"generator"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "Make a image of an elefant using pants and smiling as your best friend"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTP 200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"ai",
+								"v1",
+								"image",
+								"generator"
+							],
+							"query": [
+								{
+									"key": "userInput",
+									"value": "Make a image of an elefant using pants and smiling as your best friend"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Sep 2024 03:42:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"base64\": null,\n    \"url\": \"https://dalleproduse.blob.core.windows.net/private/images/bbb8b1a7-7f06-4c1c-b805-f1532d43a6f2/generated_00.png?se=2024-09-22T03%3A42%3A42Z&sig=X6RWmse4NAKh59L5y1mYAdJJ5VUw%2ByzHNMmiBjF4TzU%3D&ske=2024-09-28T02%3A39%3A01Z&skoid=09ba021e-c417-441c-b203-c81e5dcd7b7f&sks=b&skt=2024-09-21T02%3A39%3A01Z&sktid=33e01921-4d64-4f8c-a055-5bdaffd5e33d&skv=2020-10-02&sp=r&spr=https&sr=b&sv=2020-10-02\",\n    \"createdAt\": \"2024-09-21\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Call Image Generator with POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userInput\": \"Create an astronaut with style of starlord from Mavel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"api",
+						"ai",
+						"v1",
+						"image",
+						"generator"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTP 200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userInput\": \"Create an astronaut with style of starlord from Mavel\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"api",
+								"ai",
+								"v1",
+								"image",
+								"generator"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Sep 2024 03:44:57 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"base64\": null,\n    \"url\": \"https://dalleproduse.blob.core.windows.net/private/images/8d1123d3-57d4-4d72-9224-52a0292151f0/generated_00.png?se=2024-09-22T03%3A44%3A57Z&sig=AMnXJ5Z6iitx9KwUXfCYnU3j5Uon3alupDRhranxRXQ%3D&ske=2024-09-25T16%3A16%3A51Z&skoid=09ba021e-c417-441c-b203-c81e5dcd7b7f&sks=b&skt=2024-09-18T16%3A16%3A51Z&sktid=33e01921-4d64-4f8c-a055-5bdaffd5e33d&skv=2020-10-02&sp=r&spr=https&sr=b&sv=2020-10-02\",\n    \"createdAt\": \"2024-09-21\"\n}"
 				}
 			]
 		}
