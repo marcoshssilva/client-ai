@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.Date;
 
 @RestController
-@RequestMapping("/api/ai/v1")
+@RequestMapping("/api/client/v1")
 public class ClientControllerV1 {
     private final ChatClientInterfaceService chatClientInterfaceService;
 
