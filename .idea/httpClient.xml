@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="HttpClientEndpointsTabState">
+    <option name="requestToText" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;31a9f8ada29113e7f48e093434b4576a45553f47&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/ai/v1/chat/prompt?&amp;#10;    userInput={{$random.alphanumeric(8)}}&quot; /&gt;&#10;  &lt;entry key=&quot;1558204ddba4aad32f44bb99fe4eca0657c10e04&quot; value=&quot;###&amp;#10;POST http://localhost:8080/api/ai/v1/image/generator&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;userInput&amp;quot;: &amp;quot;&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;6893db2d70f5904f8b148105d9002b0ea41b37a2&quot; value=&quot;###&amp;#10;POST http://localhost:8080/api/ai/v1/chat/prompt&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;userInput&amp;quot;: &amp;quot;&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;1ee0cb1160d92fd68c4326531b2e61334501a0b9&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/ai/v1/image/generator?&amp;#10;    userInput={{$random.alphanumeric(8)}}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+</project>
