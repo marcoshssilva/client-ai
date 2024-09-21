@@ -17,7 +17,7 @@ LABEL version="0.0.1-SNAPSHOT"
 
 USER root
 WORKDIR /app
-COPY --from=build /build/target/backend-chat-ai-azure-*.jar app.jar
+COPY --from=build --chown=root:root --chmod=744 /build/target/backend-chat-ai-azure-*.jar app.jar
 RUN adduser apprunner
 
 USER apprunner
