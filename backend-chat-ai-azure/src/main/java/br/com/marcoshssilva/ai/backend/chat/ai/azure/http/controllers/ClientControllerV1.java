@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.Date;
 
 @RestController
-@RequestMapping("/ai")
-public class ClientController {
+@RequestMapping("/api/ai/v1")
+public class ClientControllerV1 {
     private final ChatClientInterfaceService chatClientInterfaceService;
 
-    public ClientController(ChatClientInterfaceService chatClientInterfaceService) {
+    public ClientControllerV1(ChatClientInterfaceService chatClientInterfaceService) {
         this.chatClientInterfaceService = chatClientInterfaceService;
     }
 
-    @GetMapping("/prompt")
+    @GetMapping("/chat/prompt")
     public ResponseEntity<ChatClientResponse> callPromptWithSimpleUserInputFromQueryString(@RequestParam(value = "userInput", required = true) String userInput) throws ChatClientInterfaceException {
         ChatClientResponse chatClientResponse = new ChatClientResponse(chatClientInterfaceService.callPrompt(userInput));
         return ResponseEntity.ok(chatClientResponse);
     }
 
-    @PostMapping("/prompt")
+    @PostMapping("/chat/prompt")
     public ResponseEntity<ChatClientResponse> callPromptWithSimpleUserInputFromJson(@RequestBody ChatClientRequest data) throws ChatClientInterfaceException {
         ChatClientResponse chatClientResponse = new ChatClientResponse(chatClientInterfaceService.callPrompt(data.getUserInput()));
         return ResponseEntity.ok(chatClientResponse);
