@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "1f94f03b-9c59-4841-af24-1a6de6bc0be0",
+		"name": "backend-chat-ai-azure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29043605"
+	},
+	"item": [
+		{
+			"name": "Make prompt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/ai/prompt?userInput=What's up bro?",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"ai",
+						"prompt"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "What's up bro?"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTP 200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ENDPOINT}}/ai/prompt?userInput=What's up bro?",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"ai",
+								"prompt"
+							],
+							"query": [
+								{
+									"key": "userInput",
+									"value": "What's up bro?"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Sep 2024 02:30:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Hey! Not much, just here to help you out. What's up with you? Need assistance with something?\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Make prompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userInput\": \"How to make lemonade?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/ai/prompt",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"ai",
+						"prompt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTP 200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userInput\": \"How to make lemonade?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ENDPOINT}}/ai/prompt",
+							"host": [
+								"{{API_ENDPOINT}}"
+							],
+							"path": [
+								"ai",
+								"prompt"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Sep 2024 02:28:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Making lemonade is simple and refreshing. Here’s a basic recipe for homemade lemonade:\\n\\n### Ingredients:\\n- 1 cup (240 ml) freshly squeezed lemon juice (about 4-6 lemons)\\n- 1 cup (200 g) granulated sugar (adjust to taste)\\n- 4-5 cups (950-1200 ml) cold water\\n- Ice cubes\\n- Lemon slices and mint leaves for garnish (optional)\\n\\n### Instructions:\\n\\n1. **Juice the Lemons:**\\n   - Roll the lemons on the countertop to make them easier to juice.\\n   - Cut the lemons in half and use a juicer or reamer to extract the juice.\\n   - Strain the juice through a fine-mesh sieve to remove seeds and pulp if desired.\\n\\n2. **Make the Simple Syrup:**\\n   - In a small saucepan, combine the sugar and 1 cup of water.\\n   - Heat over medium heat, stirring constantly until the sugar is completely dissolved.\\n   - Remove from heat and let it cool to room temperature. This simple syrup will help the sugar dissolve better in the lemonade.\\n\\n3. **Mix the Lemonade:**\\n   - In a large pitcher, combine the freshly squeezed lemon juice and the cooled simple syrup.\\n   - Add 3-4 cups of cold water to the pitcher and stir well. Taste the lemonade and adjust the sweetness or tartness by adding more sugar or lemon juice as needed. You can also add more water if it’s too strong.\\n\\n4. **Serve:**\\n   - Fill glasses with ice cubes.\\n   - Pour the lemonade into the glasses.\\n   - Garnish with lemon slices and mint leaves if desired.\\n\\n5. **Enjoy:**\\n   - Serve immediately and enjoy your refreshing homemade lemonade!\\n\\n### Tips:\\n- For a more intense lemon flavor, add some lemon zest to the simple syrup while it's heating.\\n- You can also experiment with adding other flavors like a splash of lime juice, a few crushed berries, or a sprig of rosemary for a unique twist.\\n\\nEnjoy your homemade lemonade!\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ENDPOINT",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "MANAGEMENT_API_ENDPOINT",
+			"value": "http://localhost:9000",
+			"type": "string"
+		}
+	]
+}
