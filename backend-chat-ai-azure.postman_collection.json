@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt?userInput=What's up bro?",
+					"raw": "{{API_ENDPOINT}}/api/client/v1/chat/prompt?userInput=What's up bro?",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
@@ -38,7 +38,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt?userInput=What's up bro?",
+							"raw": "{{API_ENDPOINT}}/api/client/v1/chat/prompt?userInput=What's up bro?",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt",
+					"raw": "{{API_ENDPOINT}}/api/client/v1/chat/prompt",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
@@ -131,7 +131,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ENDPOINT}}/api/ai/v1/chat/prompt",
+							"raw": "{{API_ENDPOINT}}/api/client/v1/chat/prompt",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
@@ -180,7 +180,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
+					"raw": "{{API_ENDPOINT}}/api/client/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
@@ -206,7 +206,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
+							"raw": "{{API_ENDPOINT}}/api/client/v1/image/generator?userInput=Make a image of an elefant using pants and smiling as your best friend",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
@@ -270,7 +270,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator",
+					"raw": "{{API_ENDPOINT}}/api/client/v1/image/generator",
 					"host": [
 						"{{API_ENDPOINT}}"
 					],
@@ -299,7 +299,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{API_ENDPOINT}}/api/ai/v1/image/generator",
+							"raw": "{{API_ENDPOINT}}/api/client/v1/image/generator",
 							"host": [
 								"{{API_ENDPOINT}}"
 							],
